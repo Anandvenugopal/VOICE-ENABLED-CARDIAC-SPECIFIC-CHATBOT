@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1>MEDAI</h1>
+                </div>
+                <div class="header-subtitle">Your personal post-angioplasty care guide</div>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" class="control-btn" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message welcome-message">
+                <div class="message-content">
+                    <h2>👋 Welcome to Your Medical Assistant!</h2>
+                    <p>I'm here to help you with your post-angioplasty care journey. Feel free to ask me about:</p>
+                    <ul>
+                        <li>Recovery process and care instructions</li>
+                        <li>Medication guidance</li>
+                        <li>Lifestyle recommendations</li>
+                        <li>Follow-up care information</li>
+                    </ul>
+                    <p>How can I assist you today?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-footer">
+            <div class="file-preview" id="file-preview"></div>
+            
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <label for="file-input" class="file-input-label" title="Upload File">
+                        <i class="fas fa-paperclip"></i>
+                        <input type="file" id="file-input" accept=".pdf,.png,.jpg,.jpeg" multiple>
+                    </label>
+                    <textarea id="message-input" placeholder="Type your message..." rows="1"></textarea>
+                    <div class="voice-btn-container">
+                        <button id="voice-btn" class="voice-btn" title="Voice Input">
+                            <i class="fas fa-microphone"></i>
+                            <div class="voice-wave">
+                                <div class="wave-circle"></div>
+                                <div class="wave wave1"></div>
+                                <div class="wave wave2"></div>
+                                <div class="wave wave3"></div>
+                            </div>
+                        </button>
+                    </div>
+                    <button id="send-btn" class="send-btn" title="Send Message">
+                        <img src="assets/send.svg" alt="Send" class="send-icon">
+                    </button>
+                </div>
+                <div class="voice-recording-indicator" id="voice-indicator">
+                    Recording... <span class="recording-dots"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
